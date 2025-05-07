@@ -1,52 +1,56 @@
-import { useEffect, useState } from 'react';
-import { useSprings, animated, easings } from '@react-spring/web';
 import profile from '../assets/profile.svg';
 import { FiDownload, FiGrid } from 'react-icons/fi';
 
-interface SplitTextProps {
-    text: string;
-    delay?: number;
-}
+// interface SplitTextProps {
+//     text: string;
+//     delay?: number;
+// }
 
-export function SplitText({ text, delay = 100 }: SplitTextProps) {
-    const letters = text.split('');
-    const [visible, setVisible] = useState(false);
+// export function SplitText({ text, delay = 100 }: SplitTextProps) {
+//     const letters = text.split('');
+//     const [visible, setVisible] = useState(false);
 
-    useEffect(() => {
-        setVisible(true);
-    }, []);
+//     useEffect(() => {
+//         setVisible(true);
+//     }, []);
 
-    const springs = useSprings(
-        letters.length,
-        letters.map((_, i) => ({
-            from: { opacity: 0, transform: 'translateY(20px)' },
-            to: visible
-                ? { opacity: 1, transform: 'translateY(0px)' }
-                : { opacity: 0, transform: 'translateY(20px)' },
-            delay: i * delay,
-            config: { easing: easings.easeOutCubic },
-        }))
-    );
+//     const springs = useSprings(
+//         letters.length,
+//         letters.map((_, i) => ({
+//             from: {
+//                 opacity: 0,
+//                 transform: 'translateY(20px)',
+//                 display: 'inline-block', // importante: aqui dentro
+//             },
+//             to: visible
+//                 ? {
+//                       opacity: 1,
+//                       transform: 'translateY(0px)',
+//                       display: 'inline-block',
+//                   }
+//                 : {
+//                       opacity: 0,
+//                       transform: 'translateY(20px)',
+//                       display: 'inline-block',
+//                   },
+//             delay: i * delay,
+//             config: { easing: easings.easeOutCubic },
+//         }))
+//     );
 
-    return (
-        <p
-            style={{ display: 'inline-block', whiteSpace: 'pre-wrap' }}
-            className="text-2xl lg:text-3xl xl:text-4xl font-bold text-(--primary) source-sans-3"
-        >
-            {springs.map((style, i) => (
-                <animated.span
-                    key={i}
-                    style={{
-                        ...style,
-                        display: 'inline-block',
-                    }}
-                >
-                    {letters[i] === ' ' ? '\u00A0' : letters[i]}
-                </animated.span>
-            ))}
-        </p>
-    );
-}
+//     return (
+//         <p
+//             style={{ display: 'inline-block', whiteSpace: 'pre-wrap' }}
+//             className="text-2xl lg:text-3xl xl:text-4xl font-bold text-(--primary) source-sans-3"
+//         >
+//             {springs.map((style, i) => (
+//                 <animated.span key={i} style={style}>
+//                     {letters[i] === ' ' ? '\u00A0' : letters[i]}
+//                 </animated.span>
+//             ))}
+//         </p>
+//     );
+// }
 
 export function Hero() {
     return (
@@ -59,7 +63,9 @@ export function Hero() {
                     <h1 className="text-5xl md:text-7xl lg:text-8xl mb-5 text-(--gray) playfair-display">
                         Maria Rita
                     </h1>
-                    <SplitText text="Desenvolvedora FullStack" />
+                    <p className="text-2xl lg:text-3xl xl:text-4xl font-bold text-(--primary) source-sans-3">
+                        Desenvolvedora FullStack
+                    </p>
                     <div className="mt-5 lg:mt-8 flex gap-4 sm:gap-6 items-center justify-center lg:justify-start">
                         <a
                             href="#projects"
