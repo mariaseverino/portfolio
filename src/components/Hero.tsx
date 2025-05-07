@@ -31,7 +31,7 @@ export function SplitText({ text, delay = 100 }: SplitTextProps) {
     return (
         <p
             style={{ display: 'inline-block', whiteSpace: 'pre-wrap' }}
-            className="text-2xl md:text-4xl font-bold text-(--primary) source-sans-3"
+            className="text-2xl lg:text-3xl xl:text-4xl font-bold text-(--primary) source-sans-3"
         >
             {springs.map((style, i) => (
                 <animated.span
@@ -50,7 +50,7 @@ export function SplitText({ text, delay = 100 }: SplitTextProps) {
 
 export function Hero() {
     return (
-        <section className="min-h-screen bg-(--background) flex items-center justify-center px-6 md:px-12">
+        <section className="min-h-screen bg-(--background) flex items-center justify-center px-6 md:px-12 py-15 md:py-0">
             <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 <div className="text-center md:text-left">
                     <p className="text-lg text-(--primary) mb-2 uppercase tracking-widest font-semibold source-sans-3">
@@ -60,21 +60,23 @@ export function Hero() {
                         Maria Rita
                     </h1>
                     <SplitText text="Desenvolvedora FullStack" />
-                    <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div className="mt-5 lg:mt-8 flex gap-4 sm:gap-6 items-center justify-center lg:justify-start">
                         <a
                             href="#projects"
                             rel="noopener noreferrer"
-                            className="mt-8 flex items-center gap-3 bg-(--primary) text-white px-6 py-3 rounded-lg font-semibold transition-transform shadow-[4px_4px_0px_0px_var(--mini-shadow-color)] source-sans-3 hover:scale-105 hover:brightness-110"
+                            className="mt-8 flex items-center gap-3 bg-(--primary) text-white px-6 py-3 rounded-lg font-semibold transition-transform shadow-[4px_4px_0px_0px_var(--mini-shadow-color)] source-sans-3 hover:scale-105 hover:brightness-110 text-sm lg:text-base"
                         >
-                            <FiGrid size={20} />
+                            <FiGrid size={20} className="hidden lg:block" />
                             Ver Projetos
                         </a>
 
                         <a
-                            href="https://github.com/mariaseverino/curriculo-maria-rita.pdf"
-                            className="mt-8 flex items-center gap-3 px-6 py-3 rounded-lg font-semibold border-2 border-(--primary) text-(--primary) bg-(--background) hover:bg-(--primary-light) hover:scale-105 transition-transform shadow-[4px_4px_0px_0px_var(--shadow-color)] source-sans-3"
+                            href="/Curriculo_Maria_Rita.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-8 flex items-center gap-3 px-6 py-3 rounded-lg font-semibold border-2 border-(--primary) text-(--primary) bg-(--background) hover:bg-(--primary-light) hover:scale-105 transition-transform shadow-[4px_4px_0px_0px_var(--shadow-color)] source-sans-3 text-sm lg:text-base"
                         >
-                            <FiDownload size={20} />
+                            <FiDownload size={20} className="hidden lg:block" />
                             Baixar Currículo
                         </a>
                     </div>
@@ -83,7 +85,7 @@ export function Hero() {
                     <img
                         src={profile}
                         alt="Ilustração de Maria Rita desenvolvedora"
-                        className="max-w-xs md:max-w-sm drop-shadow-[0_8px_20px_rgba(126,98,243,0.35)]"
+                        className="max-w-xs lg:max-w-sm drop-shadow-[0_8px_20px_rgba(126,98,243,0.35)]"
                     />
                 </div>
             </div>

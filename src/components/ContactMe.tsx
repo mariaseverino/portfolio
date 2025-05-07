@@ -1,6 +1,6 @@
 import { MdOutlineMail } from 'react-icons/md';
 import { ComicPanel } from './AboutMe';
-import { FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
 
 export function ContactMe() {
@@ -44,7 +44,7 @@ export function ContactMe() {
                             </a>
                         </div>
 
-                        <div className="mt-8 flex justify-center">
+                        {/* <div className="mt-8 flex justify-center">
                             <a
                                 href=""
                                 target="_blank"
@@ -55,7 +55,7 @@ export function ContactMe() {
                                     <FaTelegramPlane />
                                 </span>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </ComicPanel>
             </div>

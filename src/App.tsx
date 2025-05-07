@@ -11,19 +11,21 @@ function App() {
 
     function handleTheme() {
         setTheme((prevTheme) => {
-            const newTheme = prevTheme === 'dark' ? '' : 'dark';
+            const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
             localStorage.setItem('theme', newTheme);
             return newTheme;
         });
     }
 
     useEffect(() => {
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
-            setTheme(storedTheme);
-        } else {
-            setTheme('dark');
+        function getThemeFromStorage() {
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                setTheme(storedTheme);
+            }
         }
+
+        getThemeFromStorage();
     }, []);
 
     return (
@@ -32,7 +34,7 @@ function App() {
                 <div className="absolute right-4 top-4 ">
                     <button
                         onClick={handleTheme}
-                        className="fixed top-4 right-4 z-50 p-2 rounded-full bg-(--toogle-bg) text-(--toogle-color) shadow-md hover:scale-105 transition-transform cursor-pointer"
+                        className="fixed top-5 right-5 z-50 p-2 rounded-full bg-(--toogle-bg) text-(--toogle-color) shadow-md hover:scale-105 transition-transform cursor-pointer"
                         aria-label="Alternar tema"
                     >
                         {theme === 'dark' ? (

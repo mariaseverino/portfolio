@@ -1,6 +1,4 @@
 import { FiGithub } from 'react-icons/fi';
-import githubIcon from '../assets/github-mark.svg';
-import template from '../assets/repository-open-graph-template.png';
 interface Project {
     title: string;
     description: string;
@@ -13,65 +11,81 @@ interface Project {
 
 const repositorios = [
     {
-        title: 'schedule',
+        title: 'Pet Schedule Api',
         repoUrl: 'https://github.com/mariaseverino/schedule',
         description:
-            "O 'Schedule' é um sistema de agendamento desenvolvido com o foco em clínicas veterinárias. Ele permite que os profissionais agendem compromissos com seus clientes e gerenciem os horários disponíveis. Além disso, inclui integração com Stripe para pagamentos e funcionalidades de backend desenvolvidas com NestJS.",
-        tags: ['NestJS', 'TypeScript', 'Stripe', 'Prettier', 'ESLint'],
-        image: 'gradient-2',
+            "O 'Pet Schedule' é um sistema de agendamento desenvolvido com o foco em clínicas veterinárias. Ele permite que os profissionais agendem compromissos com seus clientes e gerenciem os horários disponíveis. Além disso, inclui integração com Stripe para pagamentos e funcionalidades de backend desenvolvidas com NestJS.",
+        tags: [
+            'NestJS',
+            'TypeScript',
+            'Stripe',
+            'TypeORM',
+            'PostgresSQL',
+            'Em Desenvolvimento',
+        ],
+        image: '/pet-schedule.png',
         liveUrl: '#',
     },
     {
-        title: 'frontend-mentor-interactive-comments-section',
-        repoUrl:
-            'https://github.com/mariaseverino/frontend-mentor-interactive-comments-section',
-        description:
-            'Este projeto é uma solução para o desafio do Frontend Mentor, que consiste em criar uma seção de comentários interativos. Os usuários podem adicionar, editar, excluir e responder comentários em uma interface limpa e funcional.',
-        tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Vercel'],
-        image: 'gradient-2',
-        liveUrl: '#',
-    },
-    {
-        title: 'jobs',
+        title: 'Jobs',
         repoUrl: 'https://github.com/mariaseverino/jobs',
         description:
-            'Este projeto é uma plataforma de listagem de empregos onde os usuários podem visualizar, filtrar e pesquisar vagas de trabalho. O layout é responsivo e minimalista, feito com Tailwind CSS. A Storybook foi usada para a documentação de componentes.',
+            'Este é um Sistema de Gestão de Clientes e Projetos desenvolvido para freelancers. O objetivo é oferecer uma plataforma acessível via assinatura, permitindo que profissionais independentes organizem seus trabalhos de forma eficiente.',
         tags: [
             'React',
             'TypeScript',
-            'Vite',
             'Tailwind CSS',
             'Shadcn UI',
             'Storybook',
-            'ESLint',
+            'Firebase',
+            'Em Desenvolvimento',
         ],
-        image: 'gradient-2',
+        image: '/jobs.png',
         liveUrl: '#',
     },
     {
-        title: 'notas',
-        repoUrl: 'https://github.com/mariaseverino/notas',
+        title: 'Verdejar',
+        repoUrl: 'https://github.com/mariaseverino/plant-ecommerce',
         description:
-            "O projeto 'Notas' é uma aplicação simples de gerenciamento de notas, onde o usuário pode adicionar, editar e excluir notas pessoais. Foi desenvolvido utilizando Angular no frontend e JSON Server para simular o backend.",
-        tags: ['Angular', 'Node.js', 'JSON Server'],
-        image: 'gradient-2',
+            'Verdejar é um e-commerce de venda de plantas, sementes e produtos relacionados. Desenvolvido com React, este projeto oferece uma interface moderna e responsiva para os amantes da jardinagem.',
+        tags: [
+            'React',
+            'TypeScript',
+            'Tailwind CSS',
+            'Shadcn UI',
+            'Storybook',
+            'Em Desenvolvimento',
+        ],
+        image: '/verdejar.png',
         liveUrl: '#',
     },
     {
-        title: 'motiro-study-system',
+        title: 'Motiro Study System Api',
         repoUrl: 'https://github.com/motiro/motiro-study-system',
         description:
-            "O 'Motiro Study System' é um sistema desenvolvido para gestão de estudos e recursos educacionais. Ele oferece funcionalidades de autenticação de usuários, além de permitir a criação e o gerenciamento de materiais de estudo.",
+            "O 'Motiro Study System' é um sistema desenvolvido para gestão de estudos e recursos educacionais. Ele oferece funcionalidades de autenticação de usuários, além de permitir a criação e o gerenciamento de materiais de estudo. Feito em parceria com a Motiro",
         tags: [
             'Node.js',
             'TypeScript',
             'Express',
             'Mongoose',
+            'MongoDB',
             'Jsonwebtoken',
             'Swagger',
+            'Colaborativo',
         ],
-        image: 'gradient-2',
+        image: '/motiro.png',
         liveUrl: '#',
+    },
+    {
+        title: 'Interactive Comments Section',
+        repoUrl:
+            'https://github.com/mariaseverino/frontend-mentor-interactive-comments-section',
+        description:
+            'Este projeto é uma solução para o desafio do Frontend Mentor, que consiste em criar uma seção de comentários interativos. Os usuários podem adicionar, editar, excluir e responder comentários em uma interface limpa e funcional.',
+        tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+        image: '/comments-section.png',
+        liveUrl: 'https://interactive-comments-section-eosin.vercel.app/',
     },
 ];
 
@@ -81,13 +95,23 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, className }: ProjectCardProps) {
+    const getColor = (tag: string) => {
+        switch (tag) {
+            case 'Em Desenvolvimento':
+                return 'border-amber-400';
+            case 'Colaborativo':
+                return 'border-red-700';
+            default:
+                return 'border-(--primary)';
+        }
+    };
     return (
         <ComicPanel2
-            className={`p-6 transform -rotate-1 w-full ${className} bg-(--panel-color)`}
+            className={`p-6 transform -rotate-1 w-full ${className} bg-(--panel-color) hover:-translate-y-1.5 transition-all duration-300`}
         >
             <div className="rounded-md mb-4 text-(--gray)">
                 <div className="relative">
-                    <div className="opacity-0 hover:opacity-100 bg-black/50 transition-opacity duration-300 flex absolute z-10 w-full h-full items-center justify-center">
+                    {/* <div className="opacity-0 hover:opacity-100 bg-black/50 transition-opacity duration-300 flex absolute z-10 w-full h-full items-center justify-center">
                         <a
                             href={project.repoUrl}
                             target="_blank"
@@ -121,16 +145,24 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                                 />
                             </svg>
                         </a>
-                    </div>
+                    </div> */}
                     <img
-                        src={template}
+                        src={project.image}
                         className="logo w-full"
                         alt="Vite logo"
                     />
                 </div>
 
                 <div className="source-sans-3">
-                    <h3 className="text-xl font-bold py-5">{project.title}</h3>
+                    <a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3 className="text-xl font-bold py-5 hover:text-[#7e62f3] transition-colors duration-200">
+                            {project.title}
+                        </h3>
+                    </a>
 
                     <p className="text-(--card-text) mb-5 text-base">
                         {project.description}
@@ -140,7 +172,9 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                         {project.tags.map((tag, index) => (
                             <span
                                 key={index}
-                                className="text-sm source-sans-3 px-2 py-1 rounded border border-(--primary)"
+                                className={`text-sm source-sans-3 px-2 py-1 rounded border ${getColor(
+                                    tag
+                                )}`}
                             >
                                 {tag}
                             </span>

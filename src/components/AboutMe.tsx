@@ -80,9 +80,9 @@ export function AboutMe() {
                             <SkillBadge>React</SkillBadge>
                             <SkillBadge>Next.js</SkillBadge>
                             <SkillBadge>Node.js</SkillBadge>
-                            <SkillBadge>Python</SkillBadge>
+                            <SkillBadge>PHP</SkillBadge>
+                            <SkillBadge>Drupal</SkillBadge>
                             <SkillBadge>SQL</SkillBadge>
-                            <SkillBadge>GraphQL</SkillBadge>
                             <SkillBadge>Docker</SkillBadge>
                             <SkillBadge>Git</SkillBadge>
                             <SkillBadge>TailwindCSS</SkillBadge>
