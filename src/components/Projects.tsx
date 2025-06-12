@@ -11,18 +11,30 @@ interface Project {
 
 const repositorios = [
     {
+        title: 'ILearning',
+        repoUrl:
+            'https://i-learning-8svcnpcqj-mariaseverinos-projects.vercel.app/',
+        description:
+            'O ILearning é uma plataforma de ensino e cursos online desenvolvida para oferecer uma experiência de aprendizagem intuitiva e completa. O objetivo é conectar alunos a um vasto catálogo de cursos e permitir que gerenciem seu progresso e perfil de forma eficiente.',
+        tags: ['React', 'TypeScript', 'TailwindCSS', 'React Router'],
+        image: 'https://raw.githubusercontent.com/mariaseverino/learning/main/undraw_graduation_u7uc.png',
+        liveUrl: '#',
+    },
+    {
+        title: 'ILearning Api',
+        repoUrl: 'https://github.com/mariaseverino/learning',
+        description:
+            'API REST para uma plataforma de cursos por assinatura, desenvolvida com Node.js, Fastify, Zod e Prisma. A aplicação está organizada em módulos, seguindo boas práticas de Código Limpo.',
+        tags: ['NodeJs', 'TypeScript', 'Fastify', 'Prisma', 'Zod'],
+        image: 'https://raw.githubusercontent.com/mariaseverino/learning/main/undraw_graduation_u7uc.png',
+        liveUrl: '#',
+    },
+    {
         title: 'Pet Schedule Api',
         repoUrl: 'https://github.com/mariaseverino/schedule',
         description:
             "O 'Pet Schedule' é um sistema de agendamento desenvolvido com o foco em clínicas veterinárias. Ele permite que os profissionais agendem compromissos com seus clientes e gerenciem os horários disponíveis. Além disso, inclui integração com Stripe para pagamentos e funcionalidades de backend desenvolvidas com NestJS.",
-        tags: [
-            'NestJS',
-            'TypeScript',
-            'Stripe',
-            'TypeORM',
-            'PostgresSQL',
-            'Em Desenvolvimento',
-        ],
+        tags: ['NestJS', 'TypeScript', 'Stripe', 'TypeORM', 'PostgresSQL'],
         image: '/pet-schedule.png',
         liveUrl: '#',
     },
@@ -38,25 +50,8 @@ const repositorios = [
             'Shadcn UI',
             'Storybook',
             'Firebase',
-            'Em Desenvolvimento',
         ],
         image: '/jobs.png',
-        liveUrl: '#',
-    },
-    {
-        title: 'Verdejar',
-        repoUrl: 'https://github.com/mariaseverino/plant-ecommerce',
-        description:
-            'Verdejar é um e-commerce de venda de plantas, sementes e produtos relacionados. Desenvolvido com React, este projeto oferece uma interface moderna e responsiva para os amantes da jardinagem.',
-        tags: [
-            'React',
-            'TypeScript',
-            'Tailwind CSS',
-            'Shadcn UI',
-            'Storybook',
-            'Em Desenvolvimento',
-        ],
-        image: '/verdejar.png',
         liveUrl: '#',
     },
     {
@@ -76,16 +71,6 @@ const repositorios = [
         ],
         image: '/motiro.png',
         liveUrl: '#',
-    },
-    {
-        title: 'Interactive Comments Section',
-        repoUrl:
-            'https://github.com/mariaseverino/frontend-mentor-interactive-comments-section',
-        description:
-            'Este projeto é uma solução para o desafio do Frontend Mentor, que consiste em criar uma seção de comentários interativos. Os usuários podem adicionar, editar, excluir e responder comentários em uma interface limpa e funcional.',
-        tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-        image: '/comments-section.png',
-        liveUrl: 'https://interactive-comments-section-eosin.vercel.app/',
     },
 ];
 
