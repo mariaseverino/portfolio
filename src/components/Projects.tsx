@@ -11,6 +11,15 @@ interface Project {
 
 const repositorios = [
     {
+        title: 'FeedbackLoop',
+        repoUrl: 'https://feedback-loop-seven.vercel.app/',
+        description:
+            'Aplicação web desenvolvida para facilitar a troca de feedbacks entre colegas, promovendo uma cultura de melhoria contínua no ambiente corporativo. O sistema permite o envio de mensagens anônimas ou identificadas, com foco na comunicação respeitosa e no desenvolvimento interpessoal dentro das equipes.',
+        tags: ['React', 'TypeScript', 'TailwindCSS', 'React Router'],
+        image: '/feedbackloop.png',
+        liveUrl: '#',
+    },
+    {
         title: 'ILearning',
         repoUrl:
             'https://i-learning-8svcnpcqj-mariaseverinos-projects.vercel.app/',
@@ -29,15 +38,15 @@ const repositorios = [
         image: 'https://raw.githubusercontent.com/mariaseverino/learning/main/undraw_graduation_u7uc.png',
         liveUrl: '#',
     },
-    {
-        title: 'Pet Schedule Api',
-        repoUrl: 'https://github.com/mariaseverino/schedule',
-        description:
-            "O 'Pet Schedule' é um sistema de agendamento desenvolvido com o foco em clínicas veterinárias. Ele permite que os profissionais agendem compromissos com seus clientes e gerenciem os horários disponíveis. Além disso, inclui integração com Stripe para pagamentos e funcionalidades de backend desenvolvidas com NestJS.",
-        tags: ['NestJS', 'TypeScript', 'Stripe', 'TypeORM', 'PostgresSQL'],
-        image: '/pet-schedule.png',
-        liveUrl: '#',
-    },
+    // {
+    //     title: 'Pet Schedule Api',
+    //     repoUrl: 'https://github.com/mariaseverino/schedule',
+    //     description:
+    //         "O 'Pet Schedule' é um sistema de agendamento desenvolvido com o foco em clínicas veterinárias. Ele permite que os profissionais agendem compromissos com seus clientes e gerenciem os horários disponíveis. Além disso, inclui integração com Stripe para pagamentos e funcionalidades de backend desenvolvidas com NestJS.",
+    //     tags: ['NestJS', 'TypeScript', 'Stripe', 'TypeORM', 'PostgresSQL'],
+    //     image: '/pet-schedule.png',
+    //     liveUrl: '#',
+    // },
     {
         title: 'Jobs',
         repoUrl: 'https://github.com/mariaseverino/jobs',

@@ -77,7 +77,7 @@ export function Hero() {
                         </a>
 
                         <a
-                            href="/Curriculo_Maria_Rita.pdf"
+                            href="/Curriculo_Maria_Rita_Severino.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-8 flex items-center gap-3 px-6 py-3 rounded-lg font-semibold border-2 border-(--primary) text-(--primary) bg-(--background) hover:bg-(--primary-light) hover:scale-105 transition-transform shadow-[4px_4px_0px_0px_var(--shadow-color)] source-sans-3 text-sm lg:text-base"
