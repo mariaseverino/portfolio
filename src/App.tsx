@@ -1,8 +1,7 @@
-import avatar from './assets/avatar.svg';
+import avatar from '@/assets/avatar.svg';
 import './App.css';
 import { Github, Heart, Linkedin, Mail } from 'lucide-react';
-import { Button } from './components/ui/button';
-import { Badge } from './components/ui/badge';
+import { Badge } from '@/components/ui/badge';
 
 export default function App() {
     return (
