@@ -1,0 +1,16 @@
+Olá, meu nome é Maria Rita, sou formada em Ciência da Computação. Estou entrando em contato por causa da vaga de Desenvolvedor Trainee publicada no LinkedIn.
+
+Tenho experiência como programadora trainee na Compass UOL, onde atuei em projetos utilizando PHP e Drupal. Minhas principais habilidades técnicas incluem JavaScript, React, TypeScript, Tailwind CSS, além de experiência com Node.js, Fastify, NestJS e Prisma no back-end. Também já trabalhei com banco de dados como PostgreSQL e MongoDB, alem de ter experiecia com git e metodologias ágeis.
+
+Fora da experiência profissional, tenho projetos pessoais desenvolvidos com foco em melhorar minhas habilidades, onde busquei aplicar práticas de código limpo, componentização e integração com APIs.
+
+Escolhi seguir na área de desenvolvimento porque gostei da area e gosto de ver que algo que eu ajudei a desenvolver é utilizado por outras pessoas. Estou em busca de uma oportunidade que me permita continuar aprendendo e crescendo como desenvolvedora.
+
+Vi que a vaga é presencial em Ipatinga e, mesmo não morando na cidade, sou de Sao Lourenco, eu gostaria que nao fosse um impeditivo na minha candidatura, estou disposta a me mudar caso seja selecionada.
+
+Estou enviando junto meu portfólio para que possam conhecer melhor meu trabalho.
+
+Agradeço pela atenção e ficarei feliz em participar do processo seletivo.
+
+Atenciosamente,
+Maria Rita Severino
